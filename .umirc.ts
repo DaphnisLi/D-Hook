@@ -1,17 +1,16 @@
-import { defineConfig } from 'dumi';
+// config: https://d.umijs.org/config
+
+import { defineConfig } from 'dumi'
 
 export default defineConfig({
-  title: 'daphnis-hooks',
+  title: 'Daphnis-Hooks',
   favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
-  logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+    'https://s2.loli.net/2022/08/14/51A6SiswhVeGnRL.png',
+  logo: 'https://s2.loli.net/2022/08/14/51A6SiswhVeGnRL.png',
   outputPath: 'docs',
   mode: 'site',
-  exportStatic: {},
-
   navs: [
     null,
-    { title: '源码', path: 'https://baidu.com' }
+    { title: '源码', path: 'https://github.com/DaphnisLi/daphnis-hooks' }
   ],
-  // more config: https://d.umijs.org/config
 });

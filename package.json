@@ -1,37 +1,21 @@
 {
   "name": "daphnis-hooks",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Collect commonly used hooks",
+  "author": "Daphnis",
+  "license": "ISC",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "lint": "eslint -c ./.eslintrc --ext .jsx,.js,.ts,.tsx src && stylelint ./src",
-    "lint-fix": "eslint -c ./.eslintrc --ext .jsx,.js,.ts,.tsx src --fix && stylelint ./src --fix",
+    "lint": "eslint -c ./.eslintrc --ext .jsx,.js,.ts,.tsx src",
+    "lint-fix": "eslint -c ./.eslintrc --ext .jsx,.js,.ts,.tsx src --fix",
     "commit-lint": "commitlint --from origin/master --to HEAD",
     "start": "dumi dev",
-    "docs:build": "dumi build"
-  },
-  "module": "dist/esm/index.js",
-  "typings": "dist/esm/index.d.ts",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
-    "@nicecode/changelog": "^0.2.0",
-    "@types/node": "^18.7.4",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
-    "conventional-changelog-cli": "^2.2.2",
-    "dumi": "^1.1.47",
-    "eslint": "^8.22.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "standard": "^17.0.0",
-    "typescript": "^4.7.4",
-    "yorkie": "^2.0.0"
+    "docs:build": "dumi build",
+    "build": "rm -rf dist && rollup --config && tsc -p ./tsconfig.build.json --outDir dist --declaration --declarationDir dist"
   },
   "husky": {
     "hooks": {
@@ -43,5 +27,52 @@
     "*.{jsx,js,ts,tsx}": [
       "eslint -c ./.eslintrc --ext .jsx,.js,.ts,.tsx"
     ]
+  },
+  "keywords": [
+    "React",
+    "Hook"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/plugin-transform-runtime": "^7.18.10",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.18.6",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@nicecode/changelog": "^0.2.0",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-eslint": "^8.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@types/node": "^18.7.4",
+    "@types/react": "^18.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "dumi": "^1.1.47",
+    "eslint": "^8.22.0",
+    "eslint-config-standard": "^15.0.1",
+    "eslint-config-standard-react": "^10.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-standard": "^4.0.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "rollup": "^2.78.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "standard": "^17.0.0",
+    "typescript": "^4.7.4",
+    "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

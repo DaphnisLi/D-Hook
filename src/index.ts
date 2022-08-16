@@ -1,3 +1,1 @@
-export const asd = () => {
-  return 123
-}
+export * from './request/Asd'

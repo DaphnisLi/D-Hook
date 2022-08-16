@@ -1,30 +1,70 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "standard"
-  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    "jsx": true,
+    "useJSXTextNode": true
   },
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": ["standard", "standard-react"],
+  "plugins": ["@typescript-eslint", "react-hooks"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "ignorePatterns": ["docs/**/*"],
   "rules": {
-    "comma-dangle": ["error", "always-multiline"],
-    "operator-linebreak": ["error", "before"],
-    "space-before-function-paren": [
+    "no-console": "warn",
+    "semi": "off",
+    "no-use-before-define": "off",
+    "no-multiple-empty-lines": "off",
+    "no-undef": "off",
+    "multiline-ternary": "off",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "jsx-quotes": ["error", "prefer-double"],
+    "comma-dangle": ["error", "only-multiline"],
+    "react/jsx-handler-names": "off",
+    "react/jsx-fragments": ["error", "syntax"],
+    "react/jsx-wrap-multilines": [
       "error",
-      { "anonymous": "always", "named": "always", "asyncArrow": "always" }
+      { "declaration": "parens-new-line" }
     ],
-    "handle-callback-err": "off",
-    "camelcase": "off",
-    "no-use-before-define": "off"
-  }
+    "operator-linebreak": ["error", "before"],
+    "standard/no-callback-literal": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/semi": ["error", "never"],
+        "@typescript-eslint/member-delimiter-style": ["error", {
+          "multiline": { "delimiter": "none" },
+          "singleline": { "delimiter": "comma", "requireLast": false }
+        }],
+        "@typescript-eslint/indent": ["error", 2, { "SwitchCase": 1 }],
+        "no-unused-vars": "off",
+        "dot-notation": "off",
+        "quote-props": "off",
+        "no-useless-rename": "off",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "after-used",
+            "ignoreRestSiblings": true
+          }
+        ],
+        "react/prop-types": "off",
+        "react/jsx-no-target-blank": [
+          "error",
+          { "enforceDynamicLinks": "always" }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+      }
+    }
+  ]
 }

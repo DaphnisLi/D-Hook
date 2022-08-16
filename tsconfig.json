@@ -1,26 +1,16 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "commonjs",
+    "target": "ES6",
+    "module": "esnext",
     "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "inlineSourceMap":true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "stripInternal": true,
-    "pretty": true,
-    "declaration": true,
-    "outDir": "lib",
-    "baseUrl": "./",
-    "paths": {
-      "*": ["src/*"]
-    }
+    "importHelpers": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
   },
-  "exclude": [
-    "lib",
-    "node_modules",
-    "test"
-  ]
+  "include": ["src/**/*"],
 }
