@@ -11,5 +11,3 @@ order: 0
 <p align="center">
   记录一些平常用到的 Hook
 </p>
-
-<code src="./request/Asd.tsx" />
