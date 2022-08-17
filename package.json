@@ -1,10 +1,10 @@
 {
   "name": "daphnis-hooks",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Collect commonly used hooks",
   "author": "Daphnis",
   "license": "ISC",
-  "main": "dist/index.esm.js",
+  "main": "dist/index.umd.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -15,7 +15,9 @@
     "commit-lint": "commitlint --from origin/master --to HEAD",
     "start": "dumi dev",
     "docs:build": "dumi build",
-    "build": "rm -rf dist && rollup --config && tsc -p ./tsconfig.build.json --outDir dist --declaration --declarationDir dist"
+    "build": "rm -rf dist && npm run build:esm && npm run build:umd",
+    "build:esm": "tsc --build",
+    "build:umd": "rollup --config"
   },
   "husky": {
     "hooks": {
@@ -49,6 +51,7 @@
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-eslint": "^8.0.2",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
     "@types/node": "^18.7.4",

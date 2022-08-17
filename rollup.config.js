@@ -4,15 +4,16 @@ import { babel } from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import eslint from '@rollup/plugin-eslint'
 import typescript from '@rollup/plugin-typescript';
+import json from '@rollup/plugin-json'
 
 const commonBundleConfigs = {
   name: 'daphnis-hooks',
-  format: 'esm', // 模块化
+  format: 'umd', // 模块化
   sourcemap: true,
-  globals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-  },
+  // globals: {
+  //   react: 'React',
+  //   'react-dom': 'ReactDOM',
+  // },
 }
 
 export default {
@@ -21,11 +22,11 @@ export default {
   output: [
     {
       ...commonBundleConfigs,
-      file: 'dist/index.esm.js',
+      file: 'dist/index.umd.js',
     },
     {
       ...commonBundleConfigs,
-      file: 'dist/index.esm.min.js',
+      file: 'dist/index.umd.min.js',
       plugins: [
         // min 版进行代码压缩
         terser(),
@@ -34,17 +35,25 @@ export default {
   ],
 
   plugins: [
-    resolve(),
-    commonjs(),
+    resolve({
+      browser: true,
+      preferBuiltins: true,
+    }),
+    commonjs({
+      transformMixedEsModules: true,
+      include: /node_modules/,
+      exclude: /node_modules\/react-beautiful-dnd/,
+    }),
     typescript(),
     eslint(),
     babel({
       exclude: 'node_modules/**', // 防止打包node_modules下的文件
       babelHelpers: 'runtime' // 重复打包
     }),
+    json(),
   ],
 
   // 不打包
-  external: ['react', 'react-dom'],
+  // external: ['react', 'react-dom'],
 }
 
