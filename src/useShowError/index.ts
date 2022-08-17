@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { message } from 'antd'
 
-export const useShowError = (errorDep: boolean, msg: string) => {
+export const useShowError = (errorDep: any, msg: string) => {
   useEffect(() => {
-    errorDep && message.error(msg)
+    !!errorDep && message.error(msg)
   }, [errorDep])
 }
