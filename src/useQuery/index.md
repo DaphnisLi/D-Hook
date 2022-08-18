@@ -1,5 +1,5 @@
 ---
-title: useSearch
+title: useQuery
 nav:
   title: Hooks
   path: /hooks
@@ -13,8 +13,8 @@ group:
 ```jsx | pure
 <Link to={{ search: '?songTitle=最伟大的作品' }} />
 
-interface SearchProps {
+interface QueryProps {
   songTitle: string
 }
-const search = useSearch<SearchProps>() // { songTitle: '最伟大的作品' }
+const search = useQuery<QueryProps>() // { songTitle: '最伟大的作品' }
 ```
