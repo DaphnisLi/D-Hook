@@ -5,15 +5,12 @@ import { terser } from 'rollup-plugin-terser'
 import eslint from '@rollup/plugin-eslint'
 import typescript from '@rollup/plugin-typescript';
 import json from '@rollup/plugin-json'
+import postcss from 'rollup-plugin-postcss'
 
 const commonBundleConfigs = {
   name: 'daphnis-hooks',
   format: 'umd', // 模块化
   sourcemap: true,
-  // globals: {
-  //   react: 'React',
-  //   'react-dom': 'ReactDOM',
-  // },
 }
 
 export default {
@@ -50,10 +47,9 @@ export default {
       exclude: 'node_modules/**', // 防止打包node_modules下的文件
       babelHelpers: 'runtime' // 重复打包
     }),
+    postcss(),
     json(),
   ],
 
-  // 不打包
-  // external: ['react', 'react-dom'],
 }
 

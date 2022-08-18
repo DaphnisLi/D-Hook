@@ -1,6 +1,6 @@
 {
   "name": "daphnis-hooks",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Collect commonly used hooks",
   "author": "Daphnis",
   "license": "ISC",
@@ -16,7 +16,7 @@
     "start": "dumi dev",
     "docs:build": "dumi build",
     "build": "rm -rf dist && npm run build:esm && npm run build:umd",
-    "build:esm": "tsc --build",
+    "build:esm": "tsc -p ./tsconfig.build.json",
     "build:umd": "rollup --config"
   },
   "husky": {
@@ -73,8 +73,10 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-standard": "^4.0.2",
     "husky": "^8.0.1",
+    "less": "^4.1.3",
     "lint-staged": "^13.0.3",
     "rollup": "^2.78.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "standard": "^17.0.0",
     "typescript": "^4.7.4",
@@ -83,8 +85,10 @@
   "dependencies": {
     "antd": "^4.22.5",
     "qs": "^6.11.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-router": "^6.3.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

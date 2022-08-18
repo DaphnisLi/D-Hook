@@ -13,13 +13,10 @@
     "baseUrl": ".",
     "outDir": "./dist",
     "declaration": true,
-    "declarationDir": "./dist"
+    "declarationDir": "./dist",
+    "paths": {
+      "daphnis-hooks": ["./src"],
+    }
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "src/**/__demos__/*",
-    "src/**/__tests__/*"
-  ]
+  "include": ["src/**/*", "tests/**/*"],
 }
