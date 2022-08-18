@@ -15,9 +15,8 @@
     "commit-lint": "commitlint --from origin/master --to HEAD",
     "start": "dumi dev",
     "docs:build": "dumi build",
-    "build": "rm -rf dist && npm run build:esm && npm run build:umd",
-    "build:esm": "tsc -p ./tsconfig.build.json",
-    "build:umd": "rollup --config"
+    "build": "rm -rf dist && tsc -p ./tsconfig.build.json && rollup --config",
+    "release": "./scripts/release.js"
   },
   "husky": {
     "hooks": {
@@ -59,6 +58,7 @@
     "@types/react": "^18.0.17",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
+    "chalk": "^5.0.1",
     "clean-webpack-plugin": "^4.0.0",
     "conventional-changelog-cli": "^2.2.2",
     "dumi": "^1.1.47",
@@ -73,11 +73,14 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-standard": "^4.0.2",
     "husky": "^8.0.1",
+    "inquirer": "^9.1.0",
     "less": "^4.1.3",
     "lint-staged": "^13.0.3",
     "rollup": "^2.78.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
+    "semver": "^7.3.7",
+    "shelljs": "^0.8.5",
     "standard": "^17.0.0",
     "typescript": "^4.7.4",
     "yorkie": "^2.0.0"
