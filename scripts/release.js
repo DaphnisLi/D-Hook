@@ -13,7 +13,7 @@ const patch = inc(version, 'patch') // 补丁版本 (bug)
 prompt([
   {
     type: 'list', // 单选
-    message: '选择你要发布的版本号',
+    message: '选择要发布的版本号',
     name: 'releaseVersion',
     choices: [
       {
