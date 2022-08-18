@@ -10,6 +10,5 @@ group:
   order: 2
 ---
 
-```jsx | pure
-useShowError(true, '报错, 周杰伦新歌水准下降')
-```
+<code src="./__demos__/basic.tsx"></code>
+
