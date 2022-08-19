@@ -13,7 +13,5 @@ export default defineConfig({
     null,
     { title: '源码', path: 'https://github.com/DaphnisLi/daphnis-hooks' }
   ],
-  mfsu: {
-    production: { output: '.mfsu-production' },
-  },
+  mfsu: {},
 });
