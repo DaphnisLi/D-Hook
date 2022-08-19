@@ -1,6 +1,6 @@
 {
   "name": "daphnis-hooks",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Collect commonly used hooks",
   "author": "Daphnis",
   "license": "ISC",
@@ -58,7 +58,7 @@
     "@types/react": "^18.0.17",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
-    "chalk": "^5.0.1",
+    "chalk": "^4.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "conventional-changelog-cli": "^2.2.2",
     "dumi": "^1.1.47",

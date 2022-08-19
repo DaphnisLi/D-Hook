@@ -1,7 +1,9 @@
-import { prompt } from 'inquirer'
-import { inc } from 'semver'
-import { echo, exec } from 'shelljs'
-import { green, yellow } from 'chalk'
+#!/usr/bin/env node
+
+const { prompt } = require('inquirer')
+const { inc } = require('semver')
+const { echo, exec } = require('shelljs')
+const { green, yellow } = require('chalk')
 const { version } = require('../package.json')
 
 // 自动算出要升的版本号
