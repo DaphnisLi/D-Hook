@@ -19,15 +19,15 @@ prompt([
     name: 'releaseVersion',
     choices: [
       {
-        name: `主版本: v${version} => v${major}`,
+        name: `主版本: V ${version} => V ${major}`,
         value: major // 既可以是字符串也可以是数字
       },
       {
-        name: `次版本: v${version} => v${minor}`,
+        name: `次版本: V ${version} => V ${minor}`,
         value: minor
       },
       {
-        name: `补丁版本: v${version} => v${patch}`,
+        name: `补丁版本: V ${version} => V ${patch}`,
         value: patch
       }
     ]
