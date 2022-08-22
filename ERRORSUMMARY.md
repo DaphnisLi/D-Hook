@@ -22,5 +22,8 @@
 
 ## antd
 ### antd 样式要 import, 但是此项目没有 HostRootFiber, 所以不得不放在 global.less 应用到全局
+### antd 4 依赖 react 16, 所以本项目也需一致
 
-### antd 4 依赖 react 16, 所以本项目也需一直
+
+## npm
+### peerDependencies 可以避免重复 install 同一个基础包
