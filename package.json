@@ -10,8 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "lint": "eslint -c ./.eslintrc --ext .jsx,.js,.ts,.tsx src",
-    "lint-fix": "eslint -c ./.eslintrc --ext .jsx,.js,.ts,.tsx src --fix",
+    "lint": "eslint -c ./.eslintrc --ext .jsx,.js,.ts,.tsx src && stylelint ./src'",
+    "lint-fix": "eslint -c ./.eslintrc --ext .jsx,.js,.ts,.tsx src --fix && stylelint ./src --fix",
     "commit-lint": "commitlint --from origin/master --to HEAD",
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -81,13 +81,17 @@
     "semver": "^7.3.7",
     "shelljs": "^0.8.5",
     "standard": "^17.0.0",
+    "stylelint": "^14.11.0",
+    "stylelint-config-standard": "^28.0.0",
     "typescript": "^4.7.4",
     "yorkie": "^2.0.0"
   },
   "dependencies": {
     "antd": "^4.22.5",
+    "immer": "^9.0.15",
     "qs": "^6.11.0",
-    "react-router": "^6.3.0"
+    "react-router": "^6.3.0",
+    "use-immer": "^0.7.0"
   },
   "peerDependencies": {
     "react": "^16",

@@ -17,6 +17,7 @@
   },
   "ignorePatterns": ["docs/**/*"],
   "rules": {
+    "no-redeclare": "off",
     "no-console": "warn",
     "semi": "off",
     "no-use-before-define": "off",
