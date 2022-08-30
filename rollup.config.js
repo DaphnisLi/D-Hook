@@ -11,6 +11,10 @@ const commonBundleConfigs = {
   name: 'daphnis-hooks',
   format: 'umd', // 模块化
   sourcemap: true,
+  globals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
 }
 
 export default {
@@ -51,5 +55,9 @@ export default {
     json(),
   ],
 
+  external: [
+    'react',
+    'react-dom',
+  ],
 }
 
