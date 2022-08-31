@@ -3,7 +3,6 @@ import commonjs from '@rollup/plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
 import eslint from '@rollup/plugin-eslint'
 import typescript from '@rollup/plugin-typescript';
-import json from '@rollup/plugin-json'
 import postcss from 'rollup-plugin-postcss'
 
 const commonBundleConfigs = {
@@ -47,7 +46,6 @@ export default {
     typescript(),
     eslint(),
     postcss(),
-    json(),
   ],
 
   external: [
