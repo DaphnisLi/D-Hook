@@ -1,6 +1,6 @@
 {
-  "name": "D-Hook",
-  "version": "1.4.1",
+  "name": "@daphnis/d-hook",
+  "version": "2.0.0",
   "description": "Collect commonly used hooks",
   "author": "Daphnis",
   "license": "ISC",
@@ -90,5 +90,13 @@
   "peerDependencies": {
     "react": "^16",
     "react-dom": "^16"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaphnisLi/D-Hook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DaphnisLi/D-Hook/issues"
+  },
+  "homepage": "https://github.com/DaphnisLi/D-Hook#readme"
 }
