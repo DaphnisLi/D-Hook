@@ -6,7 +6,7 @@ import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss'
 
 const commonBundleConfigs = {
-  name: 'daphnis-hooks',
+  name: 'DHook',
   format: 'umd', // 模块化
   sourcemap: true,
   globals: {

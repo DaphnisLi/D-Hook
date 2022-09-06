@@ -5,7 +5,7 @@ order: 0
 ---
 
 <p align="center" style="font-size: 32px; font-weight: bold;">
-  Daphnis-Hooks
+  DHook
 </p>
 
 <p align="center">

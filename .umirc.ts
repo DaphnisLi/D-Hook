@@ -3,7 +3,7 @@
 import { defineConfig } from 'dumi'
 
 export default defineConfig({
-  title: 'Daphnis-Hooks',
+  title: 'DHook',
   favicon:
     'https://s2.loli.net/2022/08/14/51A6SiswhVeGnRL.png',
   logo: 'https://s2.loli.net/2022/08/14/51A6SiswhVeGnRL.png',
@@ -11,7 +11,7 @@ export default defineConfig({
   mode: 'site',
   navs: [
     null,
-    { title: '源码', path: 'https://github.com/DaphnisLi/daphnis-hooks' }
+    { title: '源码', path: 'https://github.com/DaphnisLi/DHook.git' }
   ],
   mfsu: {},
 });
