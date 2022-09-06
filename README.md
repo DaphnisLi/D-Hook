@@ -1,5 +1,5 @@
-# Daphnis-Hooks
+# D-Hook
 
-## npm i daphnis-hooks -S
+## npm i @daphnis/d-hook -S
 
 记录常用的 Hooks

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useObject } from 'daphnis-hooks'
+import { useObject } from '@daphnis/d-hook'
 import { Button } from 'antd'
 
 const Demo = () => {

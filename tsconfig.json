@@ -15,7 +15,7 @@
     "declaration": true,
     "declarationDir": "./dist",
     "paths": {
-      "daphnis-hooks": ["./src"],
+      "@daphnis/d-hook": ["./src"],
     }
   },
   "include": ["src/**/*", "tests/**/*"],

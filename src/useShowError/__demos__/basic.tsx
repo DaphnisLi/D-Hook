@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button } from 'antd'
-import { useShowError } from 'daphnis-hooks'
+import { useShowError } from '@daphnis/d-hook'
 
 const Demo = () => {
   const [error, setError] = useState(false)
