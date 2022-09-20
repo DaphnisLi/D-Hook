@@ -12,6 +12,7 @@ const commonBundleConfigs = {
   globals: {
     react: 'React',
     'react-dom': 'ReactDOM',
+    antd: 'antd',
   },
 }
 
@@ -51,6 +52,7 @@ export default {
   external: [
     'react',
     'react-dom',
+    'antd',
   ],
 }
 
