@@ -84,13 +84,13 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "antd": "^4.22.5",
     "immer": "^9.0.15",
     "qs": "^6.11.0",
-    "react-router": "^6.3.0",
     "use-immer": "^0.7.0"
   },
   "peerDependencies": {
+    "react-router": "^6.3.0",
+    "antd": "^4.22.5",
     "react": "^16",
     "react-dom": "^16"
   },

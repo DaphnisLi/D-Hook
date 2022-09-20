@@ -13,6 +13,7 @@ const commonBundleConfigs = {
     react: 'React',
     'react-dom': 'ReactDOM',
     antd: 'antd',
+    'react-router': 'ReactRouter',
   },
 }
 
@@ -53,6 +54,7 @@ export default {
     'react',
     'react-dom',
     'antd',
+    'react-router',
   ],
 }
 

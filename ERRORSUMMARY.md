@@ -26,7 +26,7 @@
 
 
 ## npm
-1、peerDependencies 可以避免重复 install 同一个基础包
+1、peerDependencies 可以避免重复 install 同一个基础包而导致版本不一，但需注意，宿主环境的版本要大于等于此项目依赖的版本
 
 ## 构建
 1、tree sharking 要搭配 sideEffects 才能完美发挥其能力, 不然 webpack 会将那些认为有副作用的代码保留
