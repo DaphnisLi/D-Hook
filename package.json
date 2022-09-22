@@ -6,9 +6,9 @@
   "license": "ISC",
   "exports": {
     "import": "./dist/index.js",
-    "require": "./dist/index.umd.js",
-    "types": "./dist/index.d.ts"
+    "require": "./dist/index.umd.js"
   },
+  "typings": "dist/index.d.ts",
   "sideEffects": [
     "./src/**"
   ],
