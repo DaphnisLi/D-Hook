@@ -48,7 +48,6 @@
     "@commitlint/config-conventional": "^17.0.3",
     "@nicecode/changelog": "^0.2.0",
     "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-eslint": "^8.0.2",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
@@ -88,11 +87,11 @@
   "dependencies": {
     "immer": "^9.0.15",
     "qs": "^6.11.0",
-    "use-immer": "^0.7.0"
+    "use-immer": "^0.7.0",
+    "antd": "^4.22.5",
+    "react-router": "^6.3.0"
   },
   "peerDependencies": {
-    "react-router": "^6.3.0",
-    "antd": "^4.22.5",
     "react": "^16",
     "react-dom": "^16"
   },
