@@ -27,6 +27,16 @@
 
 ## npm
 1、peerDependencies 可以避免重复 install 同一个基础包而导致版本不一，但需注意，宿主环境的版本要大于等于此项目依赖的版本
+2、为了防止依赖冗余，package-lock.json 绝对不能发布到 npm 包，因为 npm install 的安装机制是扁平的并且 package-lock.json 会锁定依赖版本。如果宿主环境的依赖和 npm 包依赖重复并且版本不一致，就会造成依赖冗余（一个依赖，两个版本）
+
+
+## package.json
+#### NPM 包入口优先级
+webpack + 浏览器环境: browser > module > main
+webpack + node 环境: module > main
+只是 node 环境: main
+如果这三个字段都没有, 那么默认入口文件为包根目录的 index.js 文件
+https://juejin.cn/post/6844903862977953806
 
 ## 构建
 1、tree sharking 要搭配 sideEffects 才能完美发挥其能力, 不然 webpack 会将那些认为有副作用的代码保留
