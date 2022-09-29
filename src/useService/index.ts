@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
+import { CommonError } from '../library/request'
 
-export const useService = <T, R>(service: (params: T) => Promise<[R, any]>, params: T, discontinue?: () => boolean) => {
+export const useService = <T, R>(service: (params: T) => Promise<[R, CommonError]>, params: T, discontinue?: () => boolean) => {
   const [flag, setFlag] = useState(true)
-  const [res, setRes] = useState([null, null] as unknown as [R, any])
+  const [res, setRes] = useState([null, null] as unknown as [R, CommonError])
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
