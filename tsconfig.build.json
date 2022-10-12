@@ -1,6 +1,12 @@
 {
   "extends": "./tsconfig",
   "include": ["src/**/*"],
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dist",
+    "outDir": "dist",
+    "rootDir": "./src"
+  },
   "exclude": ["src/**/__demos__/*", "src/**/__tests__/*"]
   // 如果将 exclude 放在 tsconfig 里, 那么 demos 里用 packageName 引入就会报错。因为 exclude 了 _demos_
   // 那为什么不去掉呢? 因为 demos 不需要 ts

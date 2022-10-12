@@ -10,12 +10,10 @@
     "strict": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "outDir": "./dist",
-    "declaration": true,
-    "declarationDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "./src",
     "paths": {
-      "@daphnis/d-hook": ["./src"],
+      "@daphnis/d-hook": ["."],
     }
   },
   "include": ["src/**/*", "tests/**/*"],
