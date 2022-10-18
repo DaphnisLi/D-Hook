@@ -91,9 +91,9 @@
     "use-immer": "^0.7.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "react-router": "^5.0.0 || ^6.0.0",
-    "antd": "^4.0.0",
+    "react": ">=16.8.0",
+    "react-router": ">=5.0.0",
+    "antd": ">=4.0.0",
     "axios": "^0.27.2"
   },
   "repository": {
