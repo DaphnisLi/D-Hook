@@ -10,7 +10,6 @@ const commonBundleConfigs = {
   sourcemap: true,
   globals: {
     react: 'React',
-    'react-dom': 'ReactDOM',
     antd: 'antd',
     'react-router': 'ReactRouter',
     axios: 'axios',
