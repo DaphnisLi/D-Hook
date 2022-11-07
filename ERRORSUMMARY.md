@@ -41,3 +41,5 @@ https://juejin.cn/post/6844903862977953806
 ## 构建
 1、tree sharking 要搭配 sideEffects 才能完美发挥其能力, 不然 webpack 会将那些认为有副作用的代码保留
 副作用：比如修改了全局属性等
+
+2、peerDependencies 要搭配 external、globals, 因为 peerDependencies 只是一个标记, 告诉宿主环境我需要的依赖版本。external、globals 是告诉 rollup, 不打包指定依赖, 并且使用全局依赖。我觉得全局依赖有两种情况, 1、宿主环境中的依赖。2、如果宿主环境没有这个依赖, 就去获取真正的全局依赖。但如果都没有, 就要报错了。其实一般这种经过 rollup 打包后的文件都是在线上通过 cnd 来引入, 所以 global 应该是 window 对象。
