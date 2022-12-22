@@ -7,7 +7,6 @@ nav:
 group:
   title: 路由
   path: /hooks/router
-  order: 1
 ---
 
 ```jsx | pure

@@ -7,8 +7,14 @@ nav:
 group:
   title: 错误提示
   path: /hooks/error
-  order: 2
 ---
 
 <code src="./__demos__/basic.tsx"></code>
 
+
+# Params
+
+| 参数            | 说明                   | 类型                           | 默认值         |
+| -------------- | ---------------------- | ----------------------------- | ------------- |
+| `errorDep`     | 请求接口                | `CommonError`                  | 无            |
+| `msg`          | 报错文案                | `string`                       | 无            |
