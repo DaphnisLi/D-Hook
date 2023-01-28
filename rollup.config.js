@@ -50,7 +50,6 @@ export default {
 
   external: [
     'react',
-    'react-dom',
     'antd',
     'react-router',
     'axios',
