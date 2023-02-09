@@ -14,4 +14,5 @@ export default defineConfig({
     { title: '源码', path: 'https://github.com/DaphnisLi/D-Hook.git' }
   ],
   mfsu: {},
+  hash: true,
 });
